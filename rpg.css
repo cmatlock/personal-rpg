@@ -1,0 +1,130 @@
+:root{
+  --player-color: #4100a9;
+  --map-color: #7b8b9b;
+  --text-color: #c6d2df;
+
+  --potion-color: #ff0026;
+  --poison-color: #00ff66;
+  --elixir-color: #00d0ff;
+
+  --enemy-color: #fff700;
+}
+
+html{
+  font-family:'Menlo', monospace;
+}
+
+h1 {
+  color: #000000;
+}
+
+h3 {
+  text-align: center;
+}
+
+ol{
+  position: absolute;
+}
+
+.game{
+  display: flex;
+}
+
+.row{
+ width: auto;
+ display: flex;
+}
+
+.unit {
+ background-color: var(--map-color);
+ width: 1.35em;
+ height: 1.35em;
+}
+
+/* TODO: Here and elsewhere: I want things to be centered; worry about it once you have graphics */
+.player::before {
+  content: ' ◉ ';
+  color: var(--player-color);
+}
+
+.player-info-panel{
+  background-color: var(--player-color);
+  color: var(--text-color);
+  width: 13em;
+  padding: 0.6em;
+  height: inherit;
+}
+
+/* TODO: max of 3 lines of text; do i want it to vary? */
+.player-action {
+  margin: 1em;
+  height: 3em;
+  align-items: center;
+}
+
+.player-name::before{
+  content: 'Name: ';
+}
+
+.player-health::before{
+  content: 'HP: ';
+}
+
+.player-inventory::before{
+  content: 'Inventory: '
+}
+
+.bottle::before{
+  content: 'X';
+}
+
+.potion::before{
+  content: ' ♥ ';
+  color: var(--potion-color);
+}
+
+.poison::before{
+  content: ' ♠ ';
+  color: var(--poison-color);
+}
+
+.elixir::before{
+  content: ' ♦ ';
+  color: var(--elixir-color);
+}
+
+.mimic::before{
+  content: ' ⊚ ';
+  color: var(--enemy-color);
+}
+
+.fae::before{
+  content: ' ᛝ ';
+  color: var(--enemy-color);
+}
+
+.slime::before{
+  content: ' Ω ';
+  color: var(--enemy-color);
+}
+
+.golem::before{
+  content: ' Ğ ';
+  color: var(--enemy-color);
+}
+
+.demon::before{
+  content: 'ɸ';
+  color: var(--enemy-color);
+}
+
+/* TODO: Should monsters (and bottles) keep track of their own icons? */
+
+/* 
+mimic ⊚
+fae ᛝ
+demon ɸ
+slime Ω
+golem Ğ
+
+*/

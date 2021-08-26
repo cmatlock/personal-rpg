@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>⚔ Dungeon Crawler ⚔</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./rpg.js"></script>
+    <link rel="stylesheet" href="./rpg.css">
+</head>
+
+<body onkeydown="return action(event)">
+    <h1>⚔ Hello Dungeon! ⚔</h1>
+    <!-- TODO: help panel for controls and game goal; can be hidden -->
+    <div class='game'>
+      <div class='board'></div>
+      <div class='player-info-panel'>
+        <h3>Player Info</h3>
+        <!-- TODO: Needs a place for monster stats or scrolling status messages for battles -->
+        <div class='row player-name'></div>
+        <div class='row player-health'></div>
+        <div class='row player-action'></div>
+        <!-- TODO: maybe align this with the bottom -->
+        <div class='row player-inventory'>
+          <!-- max height of 10 (only 9 items in testing) -->
+          <ol class='player-items' id='player-items'></ol>
+        </div>
+      </div>
+    </div>
+    
+</body>
+
+</html>
